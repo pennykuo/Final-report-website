@@ -10,7 +10,7 @@
     url(//fonts.gstatic.com/ea/cwtexyen/v3/cwTeXYen-zhonly.woff) format('woff'),
     url(//fonts.gstatic.com/ea/cwtexyen/v3/cwTeXYen-zhonly.ttf) format('truetype');
 }
-.transition {
+.transition2 {
   display: block;
   background-color: aquamarine;
   height: 100px;
@@ -22,7 +22,7 @@
   top: -15%;
 }
 
-.workBack {
+.work2Back {
   display: flex;
   flex-direction: column;
   background-color: white;

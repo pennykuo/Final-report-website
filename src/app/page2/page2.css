@@ -41,7 +41,7 @@ li {
     opacity: 1;
 }
 
-.menuButton {
+/* .menuButton {
     -webkit-writing-mode: vertical-lr;
     writing-mode: vertical-lr;
     display: flex;
@@ -63,7 +63,7 @@ li {
     position: relative;
     transition: background-color 1.5s ease;
 
-}
+} */
 
 .menuButton.clicked {
     background-color: white;
@@ -81,27 +81,72 @@ li {
     }
 }
 
-.menuButton:hover::after {
-    content: '▲';
+/* ////////////////////// */
+
+.menuButton {
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    min-width: 200px;
+    background: #FFFFFF;
+    border: 2px solid goldenrod;
+    border-radius: 4px;
+    color: goldenrod;
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    overflow: hidden;
+    transition: 0.5s;
+    padding: 10px 20px;
+}
+
+.menuButton span {
     position: absolute;
-    bottom: -80px;
-    transform: translateX(-50%);
-    font-size: 50px;
-    animation: moveUpDown 1s infinite;
-
+    width: 25%;
+    height: 100%;
+    background-color: goldenrod;
+    transform: translateY(150%);
+    border-radius: 50%;
+    left: calc((var(--n) - 1) * 25%);
+    transition: 0.5s;
+    transition-delay: calc((var(--n) - 1) * 0.1s);
+    z-index: -1;
 }
 
-#person {
-    position: fixed;
-    left: 95%;
-    bottom: 80px;
+.menuButton:hover,
+.menuButton:focus {
+    color: black;
 }
 
-.menuButton:hover {
+.menuButton:hover span {
+    transform: translateY(0) scale(2);
+}
+
+.menuButton span:nth-child(1) {
+    --n: 1;
+}
+
+.menuButton span:nth-child(2) {
+    --n: 2;
+}
+
+.menuButton span:nth-child(3) {
+    --n: 3;
+}
+
+.menuButton span:nth-child(4) {
+    --n: 4;
+}
+
+/* ////////////////////// */
+
+/* .menuButton:hover {
     transform: scale(1.1);
     transition: .3s ease-in;
 
-}
+} */
 
 .pageBack ul li {
     opacity: 0;
@@ -151,14 +196,23 @@ li {
 }
 
 .pageBack {
-    background-color: white;
+    background-color: rgb(66, 66, 66);
     height: 100vh;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 10px;
+    position: absolute;
+}
 
+.sun {
+    position: absolute;
+    height: 200px;
+    width: 200px;
+    top: 10px;
+    left: 10px;
+    z-index: 9999;
 }
 
 .walk {
@@ -192,54 +246,6 @@ li {
     width: 80px;
     height: 80px;
     border-radius: 50px;
-}
-
-.walk1 {
-    animation: fadeInOut 1s linear infinite;
-}
-
-.walk2 {
-    animation: fadeInOut2 1s linear infinite;
-}
-
-@keyframes fadeInOut {
-
-    0%,
-    20%,
-    40%,
-    60%,
-    80%,
-    100% {
-        opacity: 1;
-    }
-
-    10%,
-    30%,
-    50%,
-    70%,
-    90% {
-        opacity: 0;
-    }
-}
-
-@keyframes fadeInOut2 {
-
-    0%,
-    20%,
-    40%,
-    60%,
-    80%,
-    100% {
-        opacity: 0;
-    }
-
-    10%,
-    30%,
-    50%,
-    70%,
-    90% {
-        opacity: 1;
-    }
 }
 
 .loading-overlay {
