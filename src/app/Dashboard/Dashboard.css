@@ -1,0 +1,210 @@
+.DashboardBack {
+  background-color: white;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+}
+
+.shake-top {
+  -webkit-animation: shake-top 0.8s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+  animation: shake-top 0.8s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+}
+
+@-webkit-keyframes shake-top {
+
+  0%,
+  100% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transform-origin: 50% 0;
+    transform-origin: 50% 0;
+  }
+
+  10% {
+    -webkit-transform: rotate(2deg);
+    transform: rotate(2deg);
+  }
+
+  20%,
+  40%,
+  60% {
+    -webkit-transform: rotate(-4deg);
+    transform: rotate(-4deg);
+  }
+
+  30%,
+  50%,
+  70% {
+    -webkit-transform: rotate(4deg);
+    transform: rotate(4deg);
+  }
+
+  80% {
+    -webkit-transform: rotate(-2deg);
+    transform: rotate(-2deg);
+  }
+
+  90% {
+    -webkit-transform: rotate(2deg);
+    transform: rotate(2deg);
+  }
+}
+
+@keyframes shake-top {
+
+  0%,
+  100% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transform-origin: 50% 0;
+    transform-origin: 50% 0;
+  }
+
+  10% {
+    -webkit-transform: rotate(2deg);
+    transform: rotate(2deg);
+  }
+
+  20%,
+  40%,
+  60% {
+    -webkit-transform: rotate(-4deg);
+    transform: rotate(-4deg);
+  }
+
+  30%,
+  50%,
+  70% {
+    -webkit-transform: rotate(4deg);
+    transform: rotate(4deg);
+  }
+
+  80% {
+    -webkit-transform: rotate(-2deg);
+    transform: rotate(-2deg);
+  }
+
+  90% {
+    -webkit-transform: rotate(2deg);
+    transform: rotate(2deg);
+  }
+}
+
+.buttonStart {
+  font-size: 20px;
+  padding: 10px;
+  box-shadow: 7px 8px 9px 1px #899599;
+  border: 3px solid transparent;
+  background-color: transparent;
+  border-radius: 24px;
+  display: inline-block;
+  cursor: pointer;
+  color: #000000;
+  font-family: 'Gochi Hand', cursive;
+  font-size: 20px;
+  padding: 11px 39px;
+  text-decoration: none;
+  margin-top: 20px;
+}
+
+.buttonStart:hover {
+  border: 3px solid rgb(106, 106, 106);
+}
+
+.buttonStart.clicked {
+  animation-name: flashBorder;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+}
+
+@keyframes flashBorder {
+  0% {
+    border: 3px solid rgb(106, 106, 106);
+  }
+
+  10% {
+    border: 3px solid white;
+  }
+
+  20% {
+    border: 3px solid rgb(106, 106, 106);
+  }
+
+  30% {
+    border: 3px solid white;
+  }
+
+  40% {
+    border: 3px solid rgb(106, 106, 106);
+  }
+
+  50% {
+    border: 3px solid white;
+  }
+
+  0% {
+    border: 3px solid rgb(106, 106, 106);
+  }
+
+  60% {
+    border: 3px solid white;
+  }
+
+  70% {
+    border: 3px solid rgb(106, 106, 106);
+  }
+
+  80% {
+    border: 3px solid white;
+  }
+
+  90% {
+    border: 3px solid rgb(106, 106, 106);
+  }
+
+  100% {
+    border: 3px solid white;
+  }
+}
+
+.switching-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: white;
+  transition: opacity 0.5s ease;
+  z-index: 1000;
+}
+
+.switching-overlay.hide {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.switching-overlay.show {
+  opacity: 1;
+}
+
+.DashboardBack h1 {
+  display: flex;
+  position: relative;
+  padding: 0 .5em;
+  transform-style: preserve-3d;
+  font: 900 7vw 'Chilanka', 'Segoe Script', 'Purisa', 'Comic Sans MS', cursive;
+}
+
+
+.DashboardBack .letter {
+  overflow: visible;
+  white-space: pre;
+  transform: rotateY(2deg) scaleX(1.02);
+}
+
+.DashboardBack .rev {
+  transform: rotateY(-2deg) scaleX(1.02);
+}
