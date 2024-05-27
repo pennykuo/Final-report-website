@@ -1,13 +1,15 @@
 ul {
     display: flex;
     width: 80%;
-
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 li {
     margin: 10px;
     height: 50%;
-    width: 100%;
+    /* width: 100%; */
 }
 
 @font-face {
@@ -65,9 +67,7 @@ li {
 
 } */
 
-.menuButton.clicked {
-    background-color: white;
-}
+
 
 @keyframes moveUpDown {
 
@@ -92,14 +92,15 @@ li {
     border: 2px solid goldenrod;
     border-radius: 4px;
     color: goldenrod;
-    font-size: 1rem;
+    font-size: 1.5rem;
     text-transform: uppercase;
     font-weight: bold;
     text-align: center;
+    font-family: 'cwTeXYen', sans-serif;
     text-decoration: none;
     overflow: hidden;
     transition: 0.5s;
-    padding: 10px 20px;
+    padding: 20px 25px;
 }
 
 .menuButton span {
@@ -196,7 +197,7 @@ li {
 }
 
 .pageBack {
-    background-color: rgb(66, 66, 66);
+    background-color: #dcdcdc;
     height: 100vh;
     width: 100%;
     display: flex;

@@ -3,7 +3,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import "./page2.css"
 import { gsap } from 'gsap';
-
+import Schedule from '../Schedule/Schedule';
 function Page2() {
     const [buttonClicked, setButtonClicked] = useState([false, false, false, false, false, false]);
     const [isPageBack, setIsPageBack] = useState(false);
@@ -22,15 +22,15 @@ function Page2() {
     }
     useEffect(() => {
         const tl = gsap.timeline();
-    
+
         tl.set(sunRef.current, {
-            y: '-100%', 
+            y: '-100%',
         })
-        .to(sunRef.current, {
-            duration: 1.5,
-            y: '10%',
-            ease: 'bounce.out',
-        });
+            .to(sunRef.current, {
+                duration: 1.5,
+                y: '10%',
+                ease: 'bounce.out',
+            });
     }, []);
     useEffect(() => {
 
@@ -49,6 +49,9 @@ function Page2() {
                 <img src="sun.png" alt="Sun" />
             </div>
             <div className="pageBack">
+                <div className="schedule">
+                    <Schedule />
+                </div>
                 <div className={`switching-overlay ${isPageBack ? 'show' : 'hide'}`}></div>
                 <ul>
                     <li key={1}>
@@ -97,6 +100,7 @@ function Page2() {
                         </Link>
                     </li>
                 </ul>
+
             </div>
             {/* <div className='walk'>
                 <div className="walk1" ref={walk1Ref}>
@@ -106,7 +110,6 @@ function Page2() {
                     <img src="/walk2.png" alt="Image 2" />
                 </div>
             </div> */}
-            {/* <div id="person"></div> */}
         </div>
         </>
     );

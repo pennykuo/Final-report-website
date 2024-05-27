@@ -1,11 +1,12 @@
 // 'use cilent'
-import Dashboard from './Dashboard/Dashboard'
+import Carousel from './Carousel/Carousel';
+// import Dashboard from './Dashboard/Dashboard'
 
 function Home() {
   return (
       <layout>
         <main>
-          <Dashboard />
+          <Carousel />
         </main>
       </layout>
   );
