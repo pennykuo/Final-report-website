@@ -26,10 +26,11 @@
   display: flex;
   flex-direction: column;
   background-color: white;
-  height: 200vh;
+  height: 100vh;
   width: 100%;
   padding: 50px;
-  position: absolute;
+  position: relative;
+  background-color: #d9ceb7;
 
 }
 
@@ -42,7 +43,7 @@
   border: none;
 }
 
-.workTitle {
+/* .workTitle {
   min-height: 15vh;
   align-self: flex-start;
   padding: 10px;
@@ -54,11 +55,14 @@
   font-family: "Gochi Hand", cursive;
   text-align: left;
   font-size: 3vw;
-}
+} */
 
 .workSubtitle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   min-height: 10vh;
-  align-self: flex-start;
+  /* align-self: flex-start; */
   /* padding-left: 40px; */
 }
 
@@ -67,20 +71,18 @@
   font-family: 'cwTeXYen', sans-serif;
   font-weight: bold;
   text-align: left;
-  font-size: 2vw;
+  font-size: 3vw;
 }
 
 .content {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
   color: hsl(198, 1%, 29%);
   font-family: "Gochi Hand", cursive;
-  font-size: 1.5vw;
+  font-size: 2vw;
   text-align: left;
-  padding-left: 40px;
-}
-
-.workH2Text {
-  padding-left: 40px;
-
 }
 
 h2 {
@@ -99,5 +101,15 @@ h2 {
 @keyframes animatedBackground {
   to {
     background-size: 100% 100%;
+  }
+}
+@media screen and (min-width:1500px) {
+  .content {
+    font-size:30px
+
+  }
+  .workTextSubtitle{
+    font-size:40px;
+
   }
 }

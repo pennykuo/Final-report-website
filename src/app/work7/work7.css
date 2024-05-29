@@ -1,0 +1,41 @@
+.work7Container {
+  padding: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 150vh;
+  width: 100%;
+  position: relative;
+  background-color: #d9ceb7;
+}
+
+/* .work7Background {
+  display: flex;
+  flex-direction: row;
+  background-color: #333;
+  width: 1160px;
+  height: 730px;
+  border-radius: 40px;
+  padding: 20px;
+} */
+
+
+
+.work7Title {
+  font-size: 40px;
+  z-index: 1;
+  border-radius: 50px;
+}
+
+.work7Content {
+  display: flex;
+  font-size: 17px;
+
+}
+
+@media screen and (min-width:1500px) {
+  .work7Image {
+    width: 1480px;
+
+  }
+}

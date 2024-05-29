@@ -1,0 +1,33 @@
+.work3Container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  background-color: #d9ceb7;
+}
+
+.work3Title {
+  font-size: 40px;
+  margin-bottom: -67px;
+  z-index: 1;
+}
+
+.work3Image {
+  border-radius: 40px;
+  width: 90%;
+  height: 350px;
+  margin: 40px;
+  object-fit: cover;
+  background-color: #edb131;
+
+}
+
+@media screen and (min-width:1500px) {
+  .work3Image {
+    width: 1480px;
+
+  }
+}

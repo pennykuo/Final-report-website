@@ -1,103 +1,22 @@
-@import url("https://fonts.googleapis.com/css?family=Gochi+Hand");
-
-@font-face {
-  font-family: 'cwTeXYen';
-  font-style: normal;
-  font-weight: 500;
-  src: url(//fonts.gstatic.com/ea/cwtexyen/v3/cwTeXYen-zhonly.eot);
-  src: url(//fonts.gstatic.com/ea/cwtexyen/v3/cwTeXYen-zhonly.eot?#iefix) format('embedded-opentype'),
-    url(//fonts.gstatic.com/ea/cwtexyen/v3/cwTeXYen-zhonly.woff2) format('woff2'),
-    url(//fonts.gstatic.com/ea/cwtexyen/v3/cwTeXYen-zhonly.woff) format('woff'),
-    url(//fonts.gstatic.com/ea/cwtexyen/v3/cwTeXYen-zhonly.ttf) format('truetype');
-}
-.transition2 {
-  display: block;
-  background-color: aquamarine;
-  height: 100px;
-  width: 100px;
-  border-radius: 50px;
-  z-index: 9999;
-  position: absolute;
-  left: -10%;
-  top: -15%;
-}
-
-.work2Back {
+.imageContainer {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   background-color: white;
-  height: 200vh;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
   width: 100%;
-  padding: 50px;
-  position: absolute;
-
+  /* padding: 200px; */
+  position: relative;
+  background-color: #d9ceb7;
 }
 
-.nextPageButton {
-  position: fixed;
-  right: 20px;
-  bottom: 50%;
-  font-size: 2em;
-  background: none;
-  border: none;
-}
-
-.workTitle {
-  min-height: 15vh;
-  align-self: flex-start;
-  padding: 10px;
-}
-
-.workTextTitle {
-  color: hsl(198, 1%, 29%);
-
-  font-family: "Gochi Hand", cursive;
-  text-align: left;
-  font-size: 3vw;
-}
-
-.workSubtitle {
-  min-height: 10vh;
-  align-self: flex-start;
-  /* padding-left: 40px; */
-}
-
-.workTextSubtitle {
-  color: hsl(198, 1%, 29%);
-  font-family: 'cwTeXYen', sans-serif;
-  font-weight: bold;
-  text-align: left;
-  font-size: 2vw;
-}
-
-.content {
-  color: hsl(198, 1%, 29%);
-  font-family: "Gochi Hand", cursive;
-  font-size: 1.5vw;
-  text-align: left;
-  padding-left: 40px;
-}
-
-.workH2Text {
-  padding-left: 40px;
-
-}
-
-h2 {
-  line-height: 1.5;
-  display: inline;
-  background-image: linear-gradient(transparent 50%,
-      #e1fffe 50%,
-      #b0f8ff 85%,
-      transparent 85%,
-      transparent 100%);
-  background-repeat: no-repeat;
-  background-size: 0% 100%;
-  animation: animatedBackground 2s cubic-bezier(0.645, 0.045, 0.355, 1) 0.5s forwards;
-}
-
-@keyframes animatedBackground {
-  to {
-    background-size: 100% 100%;
-  }
+.image {
+  border-radius: 130px;
+  width: 270px;
+  height: 350px;
+  margin: 40px;
+  object-fit: cover;
+  background-color: #edb131;
+  
 }
